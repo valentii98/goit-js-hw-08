@@ -15,7 +15,6 @@ function onFormInput(e) {
 }
 
 function onFormCreate() {
-  console.log(localStorage.getItem(STORAGE_KEY));
   const formData = JSON.parse(localStorage.getItem(STORAGE_KEY));
   const email = document.querySelector('.feedback-form input');
   const message = document.querySelector('.feedback-form textarea');
@@ -26,6 +25,7 @@ function onFormCreate() {
 }
 
 function onFormSubmit(e) {
+    console.log(formData)
   e.preventDefault();
   e.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
